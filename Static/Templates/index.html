@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/Static/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabarito">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM Serif Display">
+    <title>Home Page</title>
+</head>
+
+<body>
+<center>
+    <!-- Header -->
+    <a href="/">
+        <h1>ASCII ART WEB</h1>
+    </a>
+
+    <form action="/ascii-art" method="post">
+        <div class="border">
+            <!-- user input -->
+            <textarea name="inputUser" placeholder="Enter your text here..." required>{{.Input}}</textarea><br>
+
+            <!-- Banner Buttons -->
+            <div class="banner">
+                <label>
+                    <input type="radio" name="banner" value="standard" {{if eq .BannerName "standard" }} checked {{end}}>
+                    <span style="letter-spacing: 1.5px;">Standard</span>
+                </label>
+                <label>
+                    <input type="radio" name="banner" value="shadow" {{if eq .BannerName "shadow" }} checked {{end}}>
+                    <span class="center">Shadow</span>
+                </label>
+                <label>
+                    <input type="radio" name="banner" value="thinkertoy" {{if eq .BannerName "thinkertoy" }} checked {{end}}>
+                    <span>Thinkertoy</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- submit button -->
+        <input type="submit" value="Generate" name="submit" id="submit">
+        <input type="submit" formaction="/export" formmethod="post" value="Download" name="submit" id="submit">
+    </form>
+
+    <!-- Result Section -->
+    {{if .AsciiArt}}
+    <section>
+        <h2>Result:</h2>
+        <pre class="result">
+{{.AsciiArt}}</pre>
+    </section>
+    {{end}}
+</center>
+</body> 
+
+</html>

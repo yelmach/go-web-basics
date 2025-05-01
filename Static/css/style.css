@@ -1,0 +1,142 @@
+html {
+    font-size: 16px;
+}
+
+/****** Body ******/
+body {
+    background: url("/Static/images/green.jpg") center fixed;
+    background-size: cover;
+}
+
+/****** Header ******/
+h1 {
+    font-size: 85px;
+    margin: 0px 0px 10px 0px;
+    color: #ffffff;
+}
+a {
+    text-decoration: none;
+}
+
+/****** Border(textarea and banner buttons) ******/
+.border {
+    border-radius: 20px;
+    background-color: #70b99dce;
+    box-shadow: 2px 2px 5px 2px #00000075;
+    padding: 25px;
+    width: fit-content;
+}
+
+/****** text area ******/
+textarea {
+    resize: none;
+    font-family: "DM Serif Display";
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: #ffffffbe;
+    transition: all 0.3s ease;
+    width: 550px;
+    height: 90px;
+}
+
+textarea:focus {
+    box-shadow: 0px 0px 7px 0.1px #000000;
+}
+
+/****** Banner Buttons ******/
+.banner input {
+    position: absolute;
+    opacity: 0;
+}
+
+.banner .center {
+    padding: 5px 10px;
+    letter-spacing: 2px;
+}
+
+.banner span {
+    font-family: "DM Serif Display";
+    letter-spacing: 1px;
+    border-radius: 8px;
+    background-color: #014f4f77;
+    padding: 5px 8px;
+    margin-left: 15px;
+    color: #ffffff;
+    box-shadow: 0px 3px 2px 1px #000000a1;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.banner span:hover {
+    background-color: #034242ad;
+}
+
+input:checked ~ span {
+    background-color: #032e30d0;
+    border: 1.5px #ffffffe3 outset;
+    box-shadow: 0px 0px 0px 0.1px #000000a4;
+    transform: translateY(3px);
+}
+
+/****** Submit button(generate) ******/
+#submit {
+    border: 1.5px #ffffff7a outset;
+    font-size: 17px;
+    font-family: Gabarito;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    margin: 12px 7px;
+    padding: 5px 10px;
+    background-color: #297a6a;
+    color: white;
+    box-shadow: 0px 3px 3px 1px #000000be;
+    transition: all 0.3s ease;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: #154744;
+    box-shadow: 0px 0px 0px #101811;
+    transform: translateY(3px);
+}
+
+/****** Result section ******/
+.result {
+    border-radius: 15px;
+    background-color: #62cfa57c;
+    width: 90vw;
+    height: 400px;
+    padding: 15px;
+    overflow: auto;
+    box-shadow: 0px 0px 5px 1px #222222;
+}
+
+/****** responsivety ******/
+@media (max-width: 708px) {
+    h1 {
+        font-size: 11vw;
+    }
+
+    textarea {
+        width: 90vw;
+    }
+
+    .border {
+        border-radius: 4vw;
+        padding: 2vw 2vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .banner span {
+        font-size: 3vw;
+        margin-left: 1vw;
+    }
+    #submit {
+        font-size: 3.5vw;
+
+    }
+}
