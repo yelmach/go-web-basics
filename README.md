@@ -1,4 +1,4 @@
-# Go-Web-Basics: My First Go Web Application
+# Go Web Basics: My First Go Web Application
 
 ## Project Overview
 
